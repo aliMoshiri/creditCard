@@ -16,7 +16,7 @@ public interface CardService {
 
     CardModel addCard(CardModel cardModel);
 
-    boolean removeCard(Long cardId);
+    boolean removeCard(String cardNumber);
 
     List<CardModel> findByUserNationalId(String userNationalId);
 

@@ -70,7 +70,7 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public boolean removeCard(Long cardNumber) {
+    public boolean removeCard(String cardNumber) {
         boolean completeOperation = false;
         try {
             CardEntity loadedCardEntity = cardRepository.findByCardNumber(cardNumber);
@@ -158,6 +158,7 @@ public class CardServiceImpl implements CardService {
                 cardModel = (CardModel) Utility.modelAndEntityConverter(cardEntity, CardModel.class.getName());
                 if (cardEntity.getAccount() != null) {
                     cardModel.setAccountId(cardEntity.getAccount().getId());
+                    cardModel.setAccountNumber(cardEntity.getAccount().getAccountNumber());
                 }
             } catch (Exception e) {
                 e.printStackTrace();

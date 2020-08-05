@@ -36,7 +36,7 @@ public class CardController {
 
     @GetMapping(value = "/removeCard")
     @ResponseStatus(HttpStatus.OK)
-    public boolean removeCard(@RequestParam Long cardNumber) {
+    public boolean removeCard(@RequestParam String cardNumber) {
         if (cardNumber != null) {
             try {
                 return cardService.removeCard(cardNumber);

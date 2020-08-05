@@ -18,8 +18,8 @@ public interface CardRepository extends CrudRepository<CardEntity, Long> {
     @Query(value = "select card from CardEntity card  where card.account.user.nationalId=:nationalId ")
     List<CardEntity> findByUserNationalId(@Param("nationalId") String nationalId);
 
-    List<CardEntity> findByAccount(Long accoutNumber);
+    List<CardEntity> findByAccount(Long accountNumber);
 
-    CardEntity findByCardNumber(Long cardNumber);
+    CardEntity findByCardNumber(String cardNumber);
 
 }
