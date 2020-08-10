@@ -15,4 +15,6 @@ public interface UserRepository extends CrudRepository<UserEntity , Long> {
     @Query(value = "select card.account.user from CardEntity card  where card.cardNumber=:cardNumber ")
     UserEntity findByCardNumber(@Param("cardNumber") String cardNumber);
 
+    UserEntity findByNationalId(@Param("cardNumber") String nationalId);
+
 }
