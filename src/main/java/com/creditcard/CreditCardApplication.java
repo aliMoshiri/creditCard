@@ -56,7 +56,7 @@ public class CreditCardApplication {
             aliMoshiri.setLastName("moshiri");
             aliMoshiri.setActive(true);
             aliMoshiri.setNationalId("1234567890");
-            aliMoshiri.setMobileNO("09123456789");
+            aliMoshiri.setMobileNo("09123456789");
             aliMoshiri.setUserName("aliMoshiri");
 
             UserEntity insertedAliMoshiri = userRepository.save(aliMoshiri);
@@ -66,7 +66,7 @@ public class CreditCardApplication {
             aliAmini.setLastName("amini");
             aliAmini.setActive(true);
             aliAmini.setNationalId("1122334455");
-            aliAmini.setMobileNO("09213456789");
+            aliAmini.setMobileNo("09213456789");
 
             UserEntity insertedAliAmini = userRepository.save(aliAmini);
 

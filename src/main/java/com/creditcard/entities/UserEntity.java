@@ -34,7 +34,7 @@ public class UserEntity {
 
 
     @Column(name = "MOBILE_NO", unique = true)
-    private String mobileNO;
+    private String mobileNo;
 
     @Column(name = "IS_ACTIVE")
     private boolean isActive;
@@ -87,12 +87,12 @@ public class UserEntity {
         isActive = active;
     }
 
-    public String getMobileNO() {
-        return mobileNO;
+    public String getMobileNo() {
+        return mobileNo;
     }
 
-    public void setMobileNO(String mobileNO) {
-        this.mobileNO = mobileNO;
+    public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
     }
 
     @Override

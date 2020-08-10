@@ -127,7 +127,7 @@ public class CardServiceImpl implements CardService {
         notifyModel.setMsg(msg.toString());
         UserEntity sourceUserEntity = userService.findByCardNumber(transferModel.getSource());
         notifyProvider.setNotifyProvider(new SmsNotifyProviderImpl());
-        notifyModel.setTarget(sourceUserEntity.getMobileNO());
+        notifyModel.setTarget(sourceUserEntity.getMobileNo());
         notifyProvider.notify(notifyModel);
     }
 
