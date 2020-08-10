@@ -10,8 +10,7 @@ import javax.persistence.*;
  *  @author Ali Moshiri Amin (a.moshiri.a@gmail.com)
  */
 
-
-public class UserEntity {
+public class UserEntity extends AuditEntity<String>{
 
     public static final String TABLE_NAME = "USER_TABLE";
 

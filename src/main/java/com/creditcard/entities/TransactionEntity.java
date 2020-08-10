@@ -11,10 +11,9 @@ import java.util.Date;
  *  @author Ali Moshiri Amin (a.moshiri.a@gmail.com)
  */
 
-
 @Entity
 @Table(name = TransactionEntity.TABLE_NAME,schema = "creditcards")
-public class TransactionEntity {
+public class TransactionEntity extends AuditEntity<String>{
     public static final String TABLE_NAME = "TRANSACTION_TABLE";
 
     @Id

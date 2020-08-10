@@ -8,10 +8,10 @@ import javax.validation.constraints.NotNull;
  *  @author Ali Moshiri Amin (a.moshiri.a@gmail.com)
  */
 
-
 @Entity
 @Table(name = AccountEntity.TABLE_NAME, schema = "creditcards")
-public class AccountEntity {
+
+public class AccountEntity extends AuditEntity<String>{
     public static final String TABLE_NAME = "ACCOUNT_TABLE";
 
     @Id

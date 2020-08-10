@@ -8,11 +8,9 @@ import javax.validation.constraints.NotNull;
  *  @author Ali Moshiri Amin (a.moshiri.a@gmail.com)
  */
 
-
-
 @Entity
 @Table(name = CardEntity.TABLE_NAME,schema = "creditcards")
-public class CardEntity {
+public class CardEntity extends AuditEntity<String>{
 
     public static final String TABLE_NAME = "CARD_TABLE";
 
