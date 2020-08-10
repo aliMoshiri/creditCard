@@ -22,4 +22,5 @@ public interface CardRepository extends CrudRepository<CardEntity, Long> {
 
     CardEntity findByCardNumber(String cardNumber);
 
+    CardEntity findByCardNumberAndIsActive( String cardNumber , boolean isActive);
 }
