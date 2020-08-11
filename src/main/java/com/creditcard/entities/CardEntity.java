@@ -1,5 +1,7 @@
 package com.creditcard.entities;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -10,6 +12,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = CardEntity.TABLE_NAME,schema = "creditcards")
+@Data
 public class CardEntity extends AuditEntity<String>{
 
     public static final String TABLE_NAME = "CARD_TABLE";
@@ -53,83 +56,4 @@ public class CardEntity extends AuditEntity<String>{
     @NotNull
     private Long status;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public AccountEntity getAccount() {
-        return account;
-    }
-
-    public void setAccount(AccountEntity account) {
-        this.account = account;
-    }
-
-    public String getCardNumber() {
-        return cardNumber;
-    }
-
-    public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getSecondPassword() {
-        return secondPassword;
-    }
-
-    public void setSecondPassword(String secondPassword) {
-        this.secondPassword = secondPassword;
-    }
-
-    public String getCvv2() {
-        return cvv2;
-    }
-
-    public void setCvv2(String cvv2) {
-        this.cvv2 = cvv2;
-    }
-
-    public String getExpireMonth() {
-        return expireMonth;
-    }
-
-    public void setExpireMonth(String expireMonth) {
-        this.expireMonth = expireMonth;
-    }
-
-    public String getExpireYear() {
-        return expireYear;
-    }
-
-    public void setExpireYear(String expireYear) {
-        this.expireYear = expireYear;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
-
-    public Long getStatus() {
-        return status;
-    }
-
-    public void setStatus(Long status) {
-        this.status = status;
-    }
 }

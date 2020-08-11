@@ -1,5 +1,7 @@
 package com.creditcard.entities;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -10,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = AccountEntity.TABLE_NAME, schema = "creditcards")
-
+@Data
 public class AccountEntity extends AuditEntity<String>{
     public static final String TABLE_NAME = "ACCOUNT_TABLE";
 
@@ -37,54 +39,5 @@ public class AccountEntity extends AuditEntity<String>{
 
     @Column(name = "IS_ACTIVE")
     private boolean isActive;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public UserEntity getUser() {
-        return user;
-    }
-
-    public void setUser(UserEntity user) {
-        this.user = user;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public Long getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Long amount) {
-        this.amount = amount;
-    }
-
-    public Long getStatus() {
-        return status;
-    }
-
-    public void setStatus(Long status) {
-        this.status = status;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
 
 }

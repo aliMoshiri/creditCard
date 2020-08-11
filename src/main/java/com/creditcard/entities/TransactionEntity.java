@@ -1,5 +1,6 @@
 package com.creditcard.entities;
 
+import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = TransactionEntity.TABLE_NAME,schema = "creditcards")
+@Data
 public class TransactionEntity extends AuditEntity<String>{
     public static final String TABLE_NAME = "TRANSACTION_TABLE";
 
@@ -43,59 +45,5 @@ public class TransactionEntity extends AuditEntity<String>{
     @Column(name ="IS_DEPOSIT")
     private boolean isDeposit;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getStatus() {
-        return status;
-    }
-
-    public void setStatus(Long status) {
-        this.status = status;
-    }
-
-    public String getCardNumber() {
-        return cardNumber;
-    }
-
-    public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
-    public Long getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Long amount) {
-        this.amount = amount;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public boolean isDeposit() {
-        return isDeposit;
-    }
-
-    public void setDeposit(boolean deposit) {
-        isDeposit = deposit;
-    }
 }
