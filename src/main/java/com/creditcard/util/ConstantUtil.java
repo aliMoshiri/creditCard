@@ -4,6 +4,8 @@ public class ConstantUtil {
 
     public static class CommonFields{
         public static final String SHAHR_BANK = "6037";
+        public static final String CREDIT_CARDS_SCHEMA = "creditCards";
+
     }
 
     public static class OperationStatus {

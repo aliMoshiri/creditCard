@@ -1,5 +1,6 @@
 package com.creditcard.entities;
 
+import com.creditcard.util.ConstantUtil;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,8 +18,13 @@ public class CardEntity extends AuditEntity<String>{
 
     public static final String TABLE_NAME = "CARD_TABLE";
 
+    public static final String SEQUENCE_TABLE_NAME = ConstantUtil.CommonFields.CREDIT_CARDS_SCHEMA + "." + TABLE_NAME;
+    public static final String SEQUENCE_NAME_MAIN = SEQUENCE_TABLE_NAME + "_SEQ";
+    public static final String SEQUENCE_NAME_GENERATOR = SEQUENCE_TABLE_NAME + "_SEQUENCE";
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name = SEQUENCE_NAME_GENERATOR, sequenceName = SEQUENCE_NAME_MAIN, initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE_NAME_GENERATOR)
     @Column(name = "ID")
     private Long id;
 
